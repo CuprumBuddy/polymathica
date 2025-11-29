@@ -358,10 +358,57 @@ function renderProjectsInCard(projects, subjectId) {
 function renderSubjectCard(subject) {
     const progress = getSubjectProgress(subject.id);
     const readiness = calculateReadiness(subject);
+    const isPublicMode = viewMode === 'public';
 
     let cardClasses = `subject-card ${progress}`;
     if (readiness === 'locked') cardClasses += ' locked';
 
+    // Public mode: Show everything except notepads, read-only (no edit access)
+    if (isPublicMode) {
+        return `
+            <div class="${cardClasses}" data-id="${subject.id}">
+                <div class="subject-card-header">
+                    <span class="subject-name">${subject.name}</span>
+                    <div class="progress-checkbox ${progress}" style="pointer-events: none;"></div>
+                </div>
+                <div class="subject-card-content">
+                    ${subject.goal ? `
+                        <div class="card-section">
+                            <span class="card-section-label">Goal</span>
+                            <div class="card-goal">${subject.goal}</div>
+                        </div>
+                    ` : ''}
+
+                    ${subject.resources && subject.resources.length > 0 ? `
+                        <div class="card-section">
+                            <span class="card-section-label">Resources</span>
+                            <div class="resources-list">
+                                ${subject.resources.map(r => `
+                                    <div class="resource-item ${r.type === 'text' ? 'text-resource' : ''}">
+                                        ${r.type === 'link' ?
+                                            `<a href="${r.url}" target="_blank" rel="noopener">${r.value}</a>` :
+                                            `<span>${r.value}</span>`
+                                        }
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+
+                    ${subject.projects && subject.projects.length > 0 ? `
+                        <div class="card-section">
+                            <span class="card-section-label">Projects</span>
+                            ${renderProjectsInCard(subject.projects, subject.id)}
+                        </div>
+                    ` : ''}
+
+                    ${renderDependenciesInCard(subject)}
+                </div>
+            </div>
+        `;
+    }
+
+    // Owner mode - show full details with edit access
     return `
         <div class="${cardClasses}" data-id="${subject.id}">
             <div class="subject-card-header" onclick="openSubjectDetail('${subject.id}', event)">
@@ -408,7 +455,7 @@ function renderSubjectCard(subject) {
 function renderTier(tierName, tierData, isCollapsed = false) {
     const progress = calculateTierProgress(tierData);
     const subjectsHtml = tierData.subjects.map(renderSubjectCard).join('');
-    
+
     return `
         <div class="tier ${isCollapsed ? 'collapsed' : ''}" data-tier="${tierName}">
             <div class="tier-header" onclick="toggleTier(this)">
@@ -433,7 +480,21 @@ function render() {
     const content = document.getElementById('content');
     if (!content) return;
     let html = '';
-    if (currentView === 'dashboard') {
+
+    // Public mode: Show banner and force catalog view
+    if (viewMode === 'public') {
+        html += `
+            <div class="public-view-banner">
+                📚 You're viewing a public learning catalog.
+                <a href="https://github.com/${CONFIG.github.repoOwner}/${CONFIG.github.repoName}">Fork this tracker</a>
+                to create your own personalized version!
+            </div>
+        `;
+        // Force catalog view in public mode
+        html += Object.entries(subjects).map(([name, data]) => renderTier(name, data, false)).join('');
+    }
+    // Owner mode: Show dashboard or catalog
+    else if (currentView === 'dashboard') {
         const currentSubjects = [];
         const completedSubjects = [];
         Object.values(subjects).forEach(tierData => {
@@ -449,10 +510,11 @@ function render() {
         html += completedSubjects.length ? `<div class="subjects-grid">${completedSubjects.map(renderSubjectCard).join('')}</div>` : `<p class="empty-state">No completed subjects yet. Keep learning!</p>`;
         html += '</div>';
     } else {
-        html = Object.entries(subjects).map(([name, data]) => renderTier(name, data, false)).join('');
+        html += Object.entries(subjects).map(([name, data]) => renderTier(name, data, false)).join('');
     }
+
     content.innerHTML = html;
-    if (currentView === 'catalog') applyFilters();
+    if (currentView === 'catalog' || viewMode === 'public') applyFilters();
 }
 
 function applyFilters() {
