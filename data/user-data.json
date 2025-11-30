@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastModified": "2025-11-30T02:23:47.411Z",
+  "lastModified": "2025-11-30T11:08:43.422Z",
   "progress": {
     "calc1": "complete",
     "calc2": "partial",
@@ -28,5 +28,5 @@
     }
   },
   "theme": "dark",
-  "currentView": "catalog"
+  "currentView": "dashboard"
 }
