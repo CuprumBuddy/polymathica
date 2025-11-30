@@ -60,14 +60,13 @@ function saveProgress() {
 async function loadPublicDataFromGitHub() {
     try {
         console.log('[App] Loading public data from GitHub...');
-        // Use raw URL with cache-busting timestamp
-        // Note: GitHub API requires auth, so we use raw.githubusercontent.com for public access
-        // We use only the query parameter for cache-busting to avoid CORS preflight issues
-        const rawUrl = `https://raw.githubusercontent.com/${CONFIG.github.repoOwner}/${CONFIG.github.repoName}/${CONFIG.github.branch}/data/user-data.json`;
+        // Use GitHub Pages URL instead of raw.githubusercontent.com for better cache control
+        // GitHub Pages respects cache-busting query parameters better than raw CDN
+        const pagesUrl = `https://${CONFIG.github.repoOwner}.github.io/${CONFIG.github.repoName}/data/user-data.json`;
         const cacheBust = `?t=${Date.now()}`;
-        console.log('[App] Fetching from:', rawUrl + cacheBust);
+        console.log('[App] Fetching from:', pagesUrl + cacheBust);
 
-        const response = await fetch(rawUrl + cacheBust);
+        const response = await fetch(pagesUrl + cacheBust);
 
         console.log('[App] Response status:', response.status);
         if (!response.ok) {
