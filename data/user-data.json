@@ -1,7 +1,9 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-01T16:47:50.963Z",
-  "progress": {},
+  "lastModified": "2025-12-01T16:48:14.782Z",
+  "progress": {
+    "calc1": "partial"
+  },
   "theme": "dark",
   "version": "2.0"
 }
