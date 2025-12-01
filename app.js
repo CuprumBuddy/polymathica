@@ -2102,7 +2102,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const content = document.getElementById('content');
     if (content) content.style.display = 'none';
 
-    loadAllData();
     initializeTheme();
     currentView = loadView();
 
