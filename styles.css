@@ -1471,21 +1471,25 @@ input[type="text"] {
     }
 
     .main-nav {
-        flex-direction: column;
-        align-items: stretch;
+        gap: 10px;
+        padding: 10px 0;
     }
 
     .nav-brand {
         text-align: center;
+        margin-bottom: 5px;
     }
 
     .nav-links {
-        justify-content: stretch;
+        justify-content: center;
         flex-direction: row;
+        gap: 8px;
+        margin: 0;
     }
 
     .nav-link {
         flex: 1;
+        max-width: 150px;
     }
 
     /* Hide summaries on mobile */
@@ -1493,15 +1497,20 @@ input[type="text"] {
         display: none;
     }
 
-    /* Make nav more compact on mobile */
-    .main-nav {
-        gap: 10px;
-        padding: 10px 0;
+    /* Theme toggle and auth on one row */
+    .nav-theme-toggle {
+        width: auto;
+        flex-shrink: 1;
+        min-width: 100px;
     }
 
-    .nav-theme-toggle {
-        width: 100%;
-        justify-content: center;
+    .auth-controls {
+        flex-shrink: 1;
+    }
+
+    .settings-button {
+        padding: 5px 8px;
+        font-size: 20px;
     }
 
     .modal-content {
