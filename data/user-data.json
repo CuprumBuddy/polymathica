@@ -1,11 +1,16 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-01T19:12:52.475Z",
+  "lastModified": "2025-12-01T19:14:02.594Z",
   "progress": {
     "calc1": "complete",
     "calc2": "partial",
     "electromagnetism": "partial",
     "japanese": "partial"
+  },
+  "overlays": {
+    "calc2": {
+      "goal": "Memorize essential integral techniques; polar coordinates; and sequences, series, and convergence/divergence tests."
+    }
   },
   "theme": "dark",
   "version": "2.0"
