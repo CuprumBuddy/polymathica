@@ -1,13 +1,13 @@
 # TODO
 
 - Modularize codebase
-- Hide summaries on dashboard subject cards
 - Write good readme (short, to the point)
 - Simplify subject catalog
   - eg. get rid of (continue to fluency) in Japanese subject
 
 ## Done
 
+- Hide summaries on dashboard subject cards
 - Fix theme toggle and nav on mobile view
 - Get rid of read more summary buttons, just display the full summary inline with the Summary: header.
 - Get rid of the italization on the Summary: header and on the summary

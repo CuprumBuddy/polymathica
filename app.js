@@ -715,14 +715,6 @@ function renderSubjectCardExpanded(subject) {
     }
     html += `</div>`;
 
-    // Summary (if exists - now comes from catalog)
-    const summary = subject.summary;
-    if (summary) {
-        html += `<div class="card-section summary-section">
-                   <strong>Summary:</strong> <span class="summary-text">${summary}</span>
-                 </div>`;
-    }
-
     // Goal (if exists)
     if (subject.goal) {
         html += `<div class="card-section">
