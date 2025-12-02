@@ -950,16 +950,11 @@ function updateAuthButton() {
     const authButton = document.getElementById('authButton');
 
     if (window.githubAuth && githubAuth.isAuthenticated()) {
-        authButton.textContent = githubAuth.username || 'Signed In';
-        authButton.classList.add('signed-in');
-        authButton.onclick = (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            if (confirm('Sign out?')) {
-                githubAuth.logout();
-            }
-        };
+        // Hide the auth button when signed in
+        authButton.style.display = 'none';
     } else {
+        // Show the auth button when not signed in
+        authButton.style.display = 'block';
         authButton.textContent = 'Sign In';
         authButton.classList.remove('signed-in');
         authButton.onclick = (e) => {
@@ -967,6 +962,12 @@ function updateAuthButton() {
             e.stopPropagation();
             openAuthModal();
         };
+    }
+}
+
+function handleSignOut() {
+    if (confirm('Are you sure you want to sign out?')) {
+        githubAuth.logout();
     }
 }
 
@@ -1103,10 +1104,24 @@ function openSettingsModal() {
         return;
     }
 
-    // Show/hide sync section based on authentication
-    const syncSection = document.getElementById('syncStatusSection');
     const isAuthenticated = window.githubAuth && githubAuth.isAuthenticated();
 
+    // Show/hide account section based on authentication
+    const accountSection = document.getElementById('accountSection');
+    if (accountSection) {
+        accountSection.style.display = isAuthenticated ? 'block' : 'none';
+
+        // Update username display if authenticated
+        if (isAuthenticated) {
+            const usernameElement = document.getElementById('accountUsername');
+            if (usernameElement) {
+                usernameElement.textContent = githubAuth.username || 'Unknown';
+            }
+        }
+    }
+
+    // Show/hide sync section based on authentication
+    const syncSection = document.getElementById('syncStatusSection');
     if (syncSection) {
         syncSection.style.display = isAuthenticated ? 'block' : 'none';
     }
@@ -1501,6 +1516,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('settingsButton').addEventListener('click', openSettingsModal);
     document.getElementById('closeSettingsBtn').addEventListener('click', closeSettingsModal);
     document.getElementById('closeSettingsFooterBtn').addEventListener('click', closeSettingsModal);
+    document.getElementById('signOutBtn')?.addEventListener('click', handleSignOut);
     document.getElementById('manualSyncBtn')?.addEventListener('click', manualSync);
     document.getElementById('exportDataBtn').addEventListener('click', exportData);
     document.getElementById('importDataBtn').addEventListener('click', importData);

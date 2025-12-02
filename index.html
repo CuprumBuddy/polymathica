@@ -236,6 +236,15 @@
                     <button class="close-button" id="closeSettingsBtn">&times;</button>
                 </div>
                 <div class="modal-body">
+                    <!-- Account Section (only shown when authenticated) -->
+                    <div class="detail-section" id="accountSection" style="display: none;">
+                        <h3>Account</h3>
+                        <div class="account-info">
+                            <p>Signed in as: <strong id="accountUsername"></strong></p>
+                            <button class="action-button danger-style" id="signOutBtn">Sign Out</button>
+                        </div>
+                    </div>
+
                     <!-- Sync Status Section (only shown when authenticated) -->
                     <div class="detail-section sync-status-section" id="syncStatusSection" style="display: none;">
                         <h3>Sync Status</h3>
