@@ -1053,7 +1053,7 @@
       "order": 12,
       "subjects": {
         "japanese": {
-          "name": "Japanese (continue to fluency)",
+          "name": "Japanese",
           "prereq": [],
           "coreq": [],
           "soft": [],
@@ -1123,7 +1123,7 @@
           "summary": "Risks that threaten human extinction or permanent civilizational collapse including AI, bio, nuclear, and climate. Key topics include existential risk taxonomy, AI risk, biorisk, nuclear war, climate change, global priorities, and longtermism."
         },
         "rationality": {
-          "name": "Rationality (LessWrong canon)",
+          "name": "Rationality/LessWrong Canon",
           "prereq": [
             "prob",
             "decisionmaking",
@@ -1134,7 +1134,7 @@
           "summary": "Art of human rationality focused on overcoming bias and thinking clearly through LessWrong Sequences. Key topics include cognitive biases, Bayesian reasoning, map and territory, reductionism, mysterious answers, and motivated cognition."
         },
         "ea": {
-          "name": "Effective Altruism (cause prioritization, career planning)",
+          "name": "Effective Altruism",
           "prereq": [
             "ethics",
             "micro",
