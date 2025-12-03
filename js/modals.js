@@ -584,6 +584,36 @@ function handleSignOut() {
 }
 
 /**
+ * Update view mode after logout (called from auth.js)
+ * This preserves user data while switching to read-only mode
+ */
+function updateViewModeAfterLogout() {
+    // Switch to public (read-only) mode
+    viewMode = 'public';
+
+    // Stop auto-sync
+    if (window.githubStorage) {
+        githubStorage.stopAutoSync();
+    }
+
+    // Update UI elements
+    updateAuthButton();
+    updateSettingsButtonVisibility();
+    updateCreateSubjectButtonState();
+
+    // Close settings modal if open
+    closeSettingsModal();
+
+    // Re-render to update any UI that depends on view mode
+    render();
+
+    // Show a message to the user
+    console.log('[App] Signed out successfully');
+    console.log('[App] Your data is preserved locally in read-only mode');
+    console.log('[App] Sign back in anytime to continue editing');
+}
+
+/**
  * Update settings button visibility based on view mode
  */
 function updateSettingsButtonVisibility() {

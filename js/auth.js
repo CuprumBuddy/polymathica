@@ -106,8 +106,21 @@ class GitHubAuth {
 
     // Logout
     logout() {
+        // Save current data to localStorage before logging out
+        // This ensures we don't lose user data when switching to public mode
+        if (typeof saveSubjects === 'function') saveSubjects();
+        if (typeof saveProgress === 'function') saveProgress();
+
         this.clearAuthData();
-        window.location.reload();
+
+        // Don't reload - just update the UI to public mode
+        // This preserves the user's data in read-only mode
+        if (typeof updateViewModeAfterLogout === 'function') {
+            updateViewModeAfterLogout();
+        } else {
+            // Fallback: reload if the function doesn't exist (shouldn't happen)
+            window.location.reload();
+        }
     }
 
     // Get current view mode based on auth status

@@ -142,6 +142,34 @@ function saveProgress() {
     localStorage.setItem('subjectProgress', JSON.stringify(subjectProgress));
 }
 
+/**
+ * Load subjects from localStorage
+ * @returns {Object|null} Subjects object or null if not found
+ */
+function loadSubjectsFromLocalStorage() {
+    try {
+        const saved = localStorage.getItem('subjects');
+        return saved ? JSON.parse(saved) : null;
+    } catch (error) {
+        console.error('[App] Failed to load subjects from localStorage:', error);
+        return null;
+    }
+}
+
+/**
+ * Load progress from localStorage
+ * @returns {Object|null} Progress object or null if not found
+ */
+function loadProgressFromLocalStorage() {
+    try {
+        const saved = localStorage.getItem('subjectProgress');
+        return saved ? JSON.parse(saved) : null;
+    } catch (error) {
+        console.error('[App] Failed to load progress from localStorage:', error);
+        return null;
+    }
+}
+
 // ==========================================
 // PUBLIC DATA LOADING
 // ==========================================
@@ -153,6 +181,33 @@ function saveProgress() {
 async function loadPublicDataFromGitHub() {
     try {
         console.log('[App] Loading public data from GitHub...');
+
+        // IMPORTANT: Check localStorage first to preserve user data
+        // This prevents data loss after sign-out or page refresh
+        const localSubjects = loadSubjectsFromLocalStorage();
+        const localProgress = loadProgressFromLocalStorage();
+
+        // Use local data if it exists (even if only one piece is available)
+        // This ensures we never overwrite synced data with outdated public data
+        if (localSubjects || localProgress) {
+            console.log('[App] Found existing data in localStorage, preserving it');
+            if (localSubjects) {
+                subjects = localSubjects;
+                console.log('[App] Loaded subjects from localStorage');
+            }
+            if (localProgress) {
+                subjectProgress = localProgress;
+                console.log('[App] Loaded progress from localStorage');
+            }
+
+            // If we got subjects from localStorage, don't overwrite with public data
+            if (localSubjects) {
+                return true;
+            }
+
+            // If we only have progress but no subjects, we still need to load the catalog
+            console.log('[App] Have progress but no subjects, loading catalog...');
+        }
 
         // Load catalog first
         const catalog = await loadCatalog();

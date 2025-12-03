@@ -53,6 +53,7 @@ window.toggleTier = toggleTier;
 window.toggleSummary = toggleSummary;
 window.deleteCustomSubject = deleteCustomSubject;
 window.findDependentSubjects = findDependentSubjects;
+window.updateViewModeAfterLogout = updateViewModeAfterLogout;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
