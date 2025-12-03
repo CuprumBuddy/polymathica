@@ -396,7 +396,7 @@ function render() {
     if (isPublicMode) {
         html += `
             <div class="public-view-banner">
-                📚 You're viewing a public learning catalog.
+                📚 You're viewing Russell's Polymathica.
                 <a href="https://github.com/${CONFIG.github.repoOwner}/${CONFIG.github.repoName}">Fork this tracker</a>
                 to create your own personalized version!
             </div>
