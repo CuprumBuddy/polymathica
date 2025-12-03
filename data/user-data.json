@@ -1,15 +1,32 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-03T02:34:00.148Z",
+  "lastModified": "2025-12-03T02:49:17.549Z",
   "progress": {
     "calc1": "complete",
     "calc2": "partial",
     "japanese": "partial",
-    "electromagnetism": "partial"
+    "electromagnetism": "partial",
+    "digital-signals-theory": "empty"
   },
   "overlays": {
     "calc2": {
-      "goal": "Memorize essential integration techniques, polar coordinates, and series/sequences/convergence-divergence tests."
+      "goal": "Memorize essential integration techniques, polar coordinates, and series/sequences/convergence-divergence tests.",
+      "resources": [
+        {
+          "type": "link",
+          "value": "Active Calculus Textbook",
+          "url": "https://activecalculus.org/single2e/frontmatter.html"
+        }
+      ]
+    },
+    "calc3": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "Active Multivariable Calculus",
+          "url": "https://activecalculus.org/multi/C-9.html"
+        }
+      ]
     },
     "electromagnetism": {
       "goal": "Understand how electromagnetism works.",
@@ -23,8 +40,111 @@
         }
       ]
     },
+    "micro": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "MRU Microeconomics Course",
+          "url": "https://mru.org/principles-economics-microeconomics"
+        },
+        {
+          "type": "link",
+          "value": "MRU Everyday Economics",
+          "url": "https://mru.org/everyday-economics"
+        }
+      ]
+    },
+    "econometrics": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "MRU Mastering Econometrics",
+          "url": "https://mru.org/mastering-econometrics-joshua-angrist"
+        }
+      ]
+    },
+    "finance": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "MRU Money Skills",
+          "url": "https://mru.org/money-skills"
+        }
+      ]
+    },
+    "internationalrelations": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "MRU International Finance",
+          "url": "https://mru.org/international-finance"
+        },
+        {
+          "type": "link",
+          "value": "MRU International Trade",
+          "url": "https://mru.org/international-trade"
+        }
+      ]
+    },
+    "bighist": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "Big History Project",
+          "url": "https://bhp-public.oerproject.com/chapters/1#intro"
+        }
+      ]
+    },
+    "modernhist": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "MRU Economics History of the Soviet Union",
+          "url": "https://mru.org/economic-history-soviet-union"
+        }
+      ]
+    },
     "japanese": {
       "goal": "Pass the JLPT N1."
+    },
+    "writing": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "Navigating Beliefs",
+          "url": "https://www.navigatingbeliefs.com/"
+        }
+      ]
+    },
+    "ea": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "MRU Development Economics",
+          "url": "https://mru.org/development-economics"
+        }
+      ]
+    }
+  },
+  "customSubjects": {
+    "digital-signals-theory": {
+      "name": "Digital Signals Theory",
+      "tier": "Mathematics",
+      "prereq": [
+        "calc1"
+      ],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [
+        {
+          "type": "link",
+          "value": "Digital Signals Theory Interactive Textbook",
+          "url": "https://brianmcfee.net/dstbook-site/content/intro.html"
+        }
+      ],
+      "projects": []
     }
   },
   "theme": "dark",
