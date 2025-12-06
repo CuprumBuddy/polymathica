@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-06T19:24:48.815Z",
+  "lastModified": "2025-12-06T22:22:02.740Z",
   "progress": {
     "calc1": "complete",
     "calc2": "partial",
@@ -65,6 +65,10 @@
           "type": "link",
           "value": "Intro to ML Safety",
           "url": "https://course.mlsafety.org/"
+        },
+        {
+          "type": "text",
+          "value": "\"Introduction to AI Safety, Ethics and Society\" Textbook"
         }
       ]
     },
