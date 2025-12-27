@@ -4,7 +4,7 @@
 const CONFIG = {
     // GitHub repository settings
     github: {
-        repoOwner: 'JapanColorado',
+        repoOwner: 'CuprumBuddy',
         repoName: 'polymathica',
         branch: 'main'
     },
