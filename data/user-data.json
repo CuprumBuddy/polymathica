@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-28T07:16:52.521Z",
+  "lastModified": "2025-12-28T07:29:16.469Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
@@ -46,9 +46,20 @@
     "data-engineering": "partial",
     "data-science": "partial",
     "graph": "partial",
-    "category": "partial"
+    "category": "partial",
+    "python": "empty",
+    "numpy": "empty"
   },
   "overlays": {
+    "calc1": {
+      "resources": [
+        {
+          "type": "link",
+          "value": "OpenStax Calculus: Vol. 1",
+          "url": "https://openstax.org/details/books/calculus-volume-1"
+        }
+      ]
+    },
     "calc2": {
       "goal": "Memorize essential integration techniques, polar coordinates, and series/sequences/convergence-divergence tests.",
       "resources": [
@@ -253,6 +264,30 @@
       "name": "Data Science",
       "tier": "Computer Science",
       "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "python": {
+      "name": "Python",
+      "tier": "Computer Science",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "numpy": {
+      "name": "Numpy",
+      "tier": "Computer Science",
+      "prereq": [
+        "python"
+      ],
       "coreq": [],
       "soft": [],
       "summary": "",
