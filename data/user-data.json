@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-28T07:10:42.288Z",
+  "lastModified": "2025-12-28T07:16:05.753Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
@@ -43,7 +43,10 @@
     "complexity-sci": "partial",
     "rationality": "partial",
     "ea": "partial",
-    "data-engineering": "empty"
+    "data-engineering": "partial",
+    "data-science": "partial",
+    "graph": "partial",
+    "category": "partial"
   },
   "overlays": {
     "calc2": {
@@ -239,6 +242,17 @@
       "prereq": [
         "databases"
       ],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "data-science": {
+      "name": "Data Science",
+      "tier": "Computer Science",
+      "prereq": [],
       "coreq": [],
       "soft": [],
       "summary": "",
