@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-28T07:29:16.469Z",
+  "lastModified": "2025-12-28T07:31:34.994Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
@@ -47,8 +47,14 @@
     "data-science": "partial",
     "graph": "partial",
     "category": "partial",
-    "python": "empty",
-    "numpy": "empty"
+    "python": "partial",
+    "numpy": "empty",
+    "pandas": "empty",
+    "haskell": "empty",
+    "italian": "empty",
+    "dutch": "empty",
+    "finnish": "empty",
+    "sql": "empty"
   },
   "overlays": {
     "calc1": {
@@ -295,6 +301,44 @@
       "resources": [],
       "projects": []
     },
+    "pandas": {
+      "name": "Pandas",
+      "tier": "Computer Science",
+      "prereq": [
+        "python",
+        "numpy"
+      ],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "haskell": {
+      "name": "Haskell",
+      "tier": "Computer Science",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "sql": {
+      "name": "SQL",
+      "tier": "Computer Science",
+      "prereq": [],
+      "coreq": [
+        "databases"
+      ],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
     "naturalism": {
       "name": "Naturalism",
       "tier": "Philosophy",
@@ -325,6 +369,39 @@
           "url": "https://www.loganstrohl.com/introductory-materials"
         }
       ],
+      "projects": []
+    },
+    "italian": {
+      "name": "Italian",
+      "tier": "Languages",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "dutch": {
+      "name": "Dutch",
+      "tier": "Languages",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "finnish": {
+      "name": "Finnish",
+      "tier": "Languages",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
       "projects": []
     }
   },
