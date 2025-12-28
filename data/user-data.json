@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-28T07:39:20.704Z",
+  "lastModified": "2025-12-28T10:19:15.029Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
@@ -274,7 +274,13 @@
       "soft": [],
       "summary": "",
       "goal": null,
-      "resources": [],
+      "resources": [
+        {
+          "type": "link",
+          "value": "OpenStax Principles of Data Science",
+          "url": "https://openstax.org/details/books/principles-data-science"
+        }
+      ],
       "projects": []
     },
     "python": {
