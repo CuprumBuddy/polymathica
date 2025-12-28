@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-28T07:10:06.247Z",
+  "lastModified": "2025-12-28T07:10:42.288Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
@@ -42,7 +42,8 @@
     "writing": "partial",
     "complexity-sci": "partial",
     "rationality": "partial",
-    "ea": "partial"
+    "ea": "partial",
+    "data-engineering": "empty"
   },
   "overlays": {
     "calc2": {
@@ -230,6 +231,19 @@
           "url": "https://brianmcfee.net/dstbook-site/content/intro.html"
         }
       ],
+      "projects": []
+    },
+    "data-engineering": {
+      "name": "Data Engineering",
+      "tier": "Computer Science",
+      "prereq": [
+        "databases"
+      ],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
       "projects": []
     },
     "naturalism": {
