@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2025-12-28T10:19:15.029Z",
+  "lastModified": "2026-01-12T10:17:32.122Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
@@ -54,7 +54,10 @@
     "italian": "empty",
     "dutch": "empty",
     "finnish": "empty",
-    "sql": "empty"
+    "sql": "empty",
+    "algebra-1": "partial",
+    "algebra-2": "partial",
+    "precalculus": "partial"
   },
   "overlays": {
     "calc1": {
@@ -253,6 +256,62 @@
       ],
       "projects": []
     },
+    "algebra-1": {
+      "name": "Algebra 1",
+      "tier": "Mathematics",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [
+        {
+          "type": "link",
+          "value": "OpenStax Elementary Algebra 2e",
+          "url": "https://openstax.org/details/books/elementary-algebra-2e"
+        }
+      ],
+      "projects": []
+    },
+    "algebra-2": {
+      "name": "Algebra 2",
+      "tier": "Mathematics",
+      "prereq": [
+        "algebra-1"
+      ],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [
+        {
+          "type": "link",
+          "value": "OpenStax Intermediate Algebra 2e",
+          "url": "https://openstax.org/details/books/intermediate-algebra-2e"
+        }
+      ],
+      "projects": []
+    },
+    "precalculus": {
+      "name": "Precalculus",
+      "tier": "Mathematics",
+      "prereq": [
+        "algebra-1",
+        "algebra-2"
+      ],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [
+        {
+          "type": "link",
+          "value": "OpenStax Precalculus",
+          "url": "https://openstax.org/details/books/precalculus-2e"
+        }
+      ],
+      "projects": []
+    },
     "data-engineering": {
       "name": "Data Engineering",
       "tier": "Computer Science",
@@ -281,7 +340,15 @@
           "url": "https://openstax.org/details/books/principles-data-science"
         }
       ],
-      "projects": []
+      "projects": [
+        {
+          "id": "data-science-project-1767463134130",
+          "name": "Read Ch1 from OpenStax's \"Principles of Data Science\"",
+          "goal": "Get a grasp of whether this textbook is suitable for me",
+          "resources": [],
+          "status": "in-progress"
+        }
+      ]
     },
     "python": {
       "name": "Python",
