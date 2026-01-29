@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2026-01-29T16:13:55.290Z",
+  "lastModified": "2026-01-29T16:15:00.810Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
@@ -57,7 +57,10 @@
     "sql": "empty",
     "algebra-1": "partial",
     "algebra-2": "partial",
-    "precalculus": "partial"
+    "precalculus": "partial",
+    "nushell": "empty",
+    "vim": "empty",
+    "lean": "empty"
   },
   "overlays": {
     "calc1": {
@@ -312,6 +315,17 @@
       ],
       "projects": []
     },
+    "lean": {
+      "name": "Lean",
+      "tier": "Mathematics",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
     "data-engineering": {
       "name": "Data Engineering",
       "tier": "Computer Science",
@@ -406,6 +420,28 @@
       "coreq": [
         "databases"
       ],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "nushell": {
+      "name": "nushell",
+      "tier": "Computer Science",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "vim": {
+      "name": "Vim",
+      "tier": "Computer Science",
+      "prereq": [],
+      "coreq": [],
       "soft": [],
       "summary": "",
       "goal": null,
