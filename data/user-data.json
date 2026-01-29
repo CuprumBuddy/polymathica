@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2026-01-29T16:15:00.810Z",
+  "lastModified": "2026-01-29T16:18:50.948Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
@@ -88,6 +88,14 @@
           "type": "link",
           "value": "Active Multivariable Calculus",
           "url": "https://activecalculus.org/multi/C-9.html"
+        }
+      ]
+    },
+    "discrete": {
+      "resources": [
+        {
+          "type": "text",
+          "value": "Understand Mathematics, Understand Computing - Discrete Mathematics That All Computing Students Should Know (Arnold L. Rosenberg, Denis Trystram)"
         }
       ]
     },
@@ -322,8 +330,24 @@
       "coreq": [],
       "soft": [],
       "summary": "",
-      "goal": null,
-      "resources": [],
+      "goal": "Learn how to write mathematical proofs while also having not only ChatGPT-authored feedback",
+      "resources": [
+        {
+          "type": "link",
+          "value": "The Mechanics of Proof",
+          "url": "https://hrmacbeth.github.io/math2001/"
+        },
+        {
+          "type": "link",
+          "value": "Lean 4 Web",
+          "url": "https://live.lean-lang.org/"
+        },
+        {
+          "type": "link",
+          "value": "Learn Lean 4 in Y Minutes",
+          "url": "https://learnxinyminutes.com/lean4/"
+        }
+      ],
       "projects": []
     },
     "data-engineering": {
