@@ -1,19 +1,19 @@
 {
   "schema": "3.0",
-  "lastModified": "2026-01-29T16:18:50.948Z",
+  "lastModified": "2026-01-30T16:45:59.376Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
     "japanese": "partial",
     "electromagnetism": "empty",
-    "digital-signals-theory": "empty",
+    "digital-signals-theory": "partial",
     "linalg": "partial",
     "optics": "empty",
     "naturalism": "empty",
     "discrete": "partial",
     "logic": "partial",
     "neuro": "partial",
-    "cellbio": "empty",
+    "cellbio": "partial",
     "anatomy": "partial",
     "algorithms": "partial",
     "datastructures": "partial",
@@ -60,7 +60,12 @@
     "precalculus": "partial",
     "nushell": "empty",
     "vim": "empty",
-    "lean": "empty"
+    "lean": "empty",
+    "dynamical": "partial",
+    "molbio": "partial",
+    "neural-computation": "empty",
+    "neurobiology-of-self": "empty",
+    "computational-psycholinguistics": "empty"
   },
   "overlays": {
     "calc1": {
@@ -350,6 +355,34 @@
       ],
       "projects": []
     },
+    "neural-computation": {
+      "name": "Neural Computation",
+      "tier": "Biology & Life Sciences",
+      "prereq": [
+        "electromagnetism",
+        "neuro",
+        "data-science"
+      ],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "neurobiology-of-self": {
+      "name": "Neurobiology of Self",
+      "tier": "Biology & Life Sciences",
+      "prereq": [
+        "neuro"
+      ],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
     "data-engineering": {
       "name": "Data Engineering",
       "tier": "Computer Science",
@@ -530,6 +563,21 @@
       "name": "Finnish",
       "tier": "Languages",
       "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "computational-psycholinguistics": {
+      "name": "Computational Psycholinguistics",
+      "tier": "Interdisciplinary",
+      "prereq": [
+        "data-science",
+        "prob",
+        "neural-computation"
+      ],
       "coreq": [],
       "soft": [],
       "summary": "",
