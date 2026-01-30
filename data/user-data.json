@@ -1,6 +1,6 @@
 {
   "schema": "3.0",
-  "lastModified": "2026-01-30T16:58:35.749Z",
+  "lastModified": "2026-01-30T17:00:04.207Z",
   "progress": {
     "calc1": "partial",
     "calc2": "empty",
@@ -65,7 +65,9 @@
     "molbio": "partial",
     "neural-computation": "empty",
     "neurobiology-of-self": "empty",
-    "computational-psycholinguistics": "empty"
+    "computational-psycholinguistics": "empty",
+    "r": "empty",
+    "english": "partial"
   },
   "overlays": {
     "calc1": {
@@ -210,23 +212,7 @@
       ]
     },
     "japanese": {
-      "goal": "Become fluent in Japanese.",
-      "resources": [
-        {
-          "type": "link",
-          "value": "Anki - Vocab Deck",
-          "url": "https://tatsumoto-ren.github.io/blog/ankidrone-essentials.html"
-        },
-        {
-          "type": "link",
-          "value": "Anki - Grammar Deck",
-          "url": "https://ankiweb.net/shared/info/1013111837"
-        },
-        {
-          "type": "text",
-          "value": "Anki - Mining Deck"
-        }
-      ]
+      "goal": "Become fluent in Japanese."
     },
     "writing": {
       "resources": [
@@ -505,6 +491,17 @@
       "resources": [],
       "projects": []
     },
+    "r": {
+      "name": "R",
+      "tier": "Computer Science",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
     "naturalism": {
       "name": "Naturalism",
       "tier": "Philosophy",
@@ -561,6 +558,17 @@
     },
     "finnish": {
       "name": "Finnish",
+      "tier": "Languages",
+      "prereq": [],
+      "coreq": [],
+      "soft": [],
+      "summary": "",
+      "goal": null,
+      "resources": [],
+      "projects": []
+    },
+    "english": {
+      "name": "English",
       "tier": "Languages",
       "prereq": [],
       "coreq": [],
